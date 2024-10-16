@@ -7,6 +7,7 @@ type Blog = {
   slug: string;
 };
 
+//list of currently posted blogs
 const blogs: Blog[] = [
   {
     title: "I love sour cream",
@@ -29,6 +30,7 @@ const blogs: Blog[] = [
   },
 ];
 
+//logic for dynamically adding blogs into DOM
 function addBlogs(blogs: Blog[]) {
   const blogContainer = document.getElementById("blog-container");
 
@@ -71,4 +73,4 @@ function addBlogs(blogs: Blog[]) {
   return;
 }
 
-addBlogs(blogs);
+addBlogs(blogs); //add all blogs in the list
