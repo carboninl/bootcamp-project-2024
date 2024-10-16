@@ -41,6 +41,10 @@ function addBlogs(blogs: Blog[]) {
     const entryHeader = document.createElement("h1");
     entryHeader.innerHTML = blog.title;
 
+    //build date
+    const entryDate = document.createElement("h5");
+    entryDate.innerHTML = blog.date;
+
     //build image
     const entryImage = document.createElement("img");
     entryImage.src = blog.image;
@@ -52,6 +56,7 @@ function addBlogs(blogs: Blog[]) {
 
     //append all the blog elements to the new entry
     newEntry.appendChild(entryHeader);
+    newEntry.appendChild(entryDate);
     newEntry.appendChild(entryImage);
     newEntry.appendChild(entryDescription);
 

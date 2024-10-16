@@ -25,6 +25,9 @@ function addBlogs(blogs) {
         //build header
         var entryHeader = document.createElement("h1");
         entryHeader.innerHTML = blog.title;
+        //build date
+        var entryDate = document.createElement("h5");
+        entryDate.innerHTML = blog.date;
         //build image
         var entryImage = document.createElement("img");
         entryImage.src = blog.image;
@@ -34,6 +37,7 @@ function addBlogs(blogs) {
         entryDescription.innerHTML = blog.description;
         //append all the blog elements to the new entry
         newEntry.appendChild(entryHeader);
+        newEntry.appendChild(entryDate);
         newEntry.appendChild(entryImage);
         newEntry.appendChild(entryDescription);
         //append new entry to blogContainer
