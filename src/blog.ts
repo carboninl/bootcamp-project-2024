@@ -39,7 +39,7 @@ function addBlogs(blogs: Blog[]) {
     const newEntry = document.createElement("div");
     newEntry.className = "blog-entry";
     newEntry.innerHTML = `
-      <a href="${blog.slug}.html">
+      <a href="../blogs/${blog.slug}.html">
         <h1>${blog.title}</h1>
       </a>
       <h5>${blog.date}</h5>

@@ -24,36 +24,7 @@ function addBlogs(blogs) {
         //build new blog entry element
         var newEntry = document.createElement("div");
         newEntry.className = "blog-entry";
-        newEntry.innerHTML = "\n      <a href=\"".concat(blog.slug, "\">\n        <h1>").concat(blog.title, "</h1>\n      </a>\n      <h5>").concat(blog.date, "</h5>\n      <img src=\"").concat(blog.image, "\" alt=\"").concat(blog.imageAlt, "\">\n      <p>").concat(blog.description, "</p>\n    ");
-        /*
-        //build header
-        const entryHeader = document.createElement("h1");
-        entryHeader.innerHTML = blog.title;
-    
-        //build <a>
-        const entryLink = document.createElement("a");
-        entryLink.href = '${blog.slug}.html';
-        entryLink.appendChild(entryHeader)
-    
-        //build date
-        const entryDate = document.createElement("h5");
-        entryDate.innerHTML = blog.date;
-    
-        //build image
-        const entryImage = document.createElement("img");
-        entryImage.src = blog.image;
-        entryImage.alt = blog.imageAlt;
-    
-        //build description
-        const entryDescription = document.createElement("p");
-        entryDescription.innerHTML = blog.description;
-    
-        //append all the blog elements to the new entry
-        newEntry.appendChild(entryHeader);
-        newEntry.appendChild(entryDate);
-        newEntry.appendChild(entryImage);
-        newEntry.appendChild(entryDescription);
-     */
+        newEntry.innerHTML = "\n      <a href=\"../blogs/".concat(blog.slug, ".html\">\n        <h1>").concat(blog.title, "</h1>\n      </a>\n      <h5>").concat(blog.date, "</h5>\n      <img src=\"").concat(blog.image, "\" alt=\"").concat(blog.imageAlt, "\">\n      <p>").concat(blog.description, "</p>\n    ");
         //append new entry to blogContainer
         if (blogContainer) {
             blogContainer.appendChild(newEntry);
