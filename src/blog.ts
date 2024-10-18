@@ -13,7 +13,7 @@ const blogs: Blog[] = [
     title: "I love sour cream",
     date: "10/15/2024",
     description:
-      "Sour cream is possibly one of the greatest inventions ever made. Give me a burrito bowl and I am dousing it in sour cream. If the top layer isn't purely white, I don't want it. Yummers.",
+      "Learn about my love for sour cream!",
     image: "/../images/sourcream.jpg",
     imageAlt: "yummy sour cream",
     slug: "Sour-Cream-Blog",
@@ -22,7 +22,7 @@ const blogs: Blog[] = [
     title: "Software Engineering in Rome",
     date: "10/15/2024",
     description:
-      "I am just a few days away from marking my first month abroad in Rome. I have been seeing so many cool sights, as well as learning software engineering and even a little Italian!",
+      "Learn about my amazing experience abroad so far!",
     image: "/../images/leaning-tower.jpg",
     imageAlt:
       "me hitting the classic tourist pose with the Leaning Towe of Pisa",
@@ -39,7 +39,7 @@ function addBlogs(blogs: Blog[]) {
     const newEntry = document.createElement("div");
     newEntry.className = "blog-entry";
     newEntry.innerHTML = `
-      <a href="../${blog.slug}.html">
+      <a href="../blogs/${blog.slug}.html">
         <h1>${blog.title}</h1>
       </a>
       <h5>${blog.date}</h5>
