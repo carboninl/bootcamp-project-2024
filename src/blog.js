@@ -24,7 +24,7 @@ function addBlogs(blogs) {
         //build new blog entry element
         var newEntry = document.createElement("div");
         newEntry.className = "blog-entry";
-        newEntry.innerHTML = "\n      <a href=\"../blogs/".concat(blog.slug, ".html\">\n        <h1>").concat(blog.title, "</h1>\n      </a>\n      <h5>").concat(blog.date, "</h5>\n      <img src=\"").concat(blog.image, "\" alt=\"").concat(blog.imageAlt, "\">\n      <p>").concat(blog.description, "</p>\n    ");
+        newEntry.innerHTML = "\n      <a href=\"../".concat(blog.slug, ".html\">\n        <h1>").concat(blog.title, "</h1>\n      </a>\n      <h5>").concat(blog.date, "</h5>\n      <img src=\"").concat(blog.image, "\" alt=\"").concat(blog.imageAlt, "\">\n      <p>").concat(blog.description, "</p>\n    ");
         //append new entry to blogContainer
         if (blogContainer) {
             blogContainer.appendChild(newEntry);
