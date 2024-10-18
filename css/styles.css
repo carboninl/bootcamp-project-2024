@@ -341,3 +341,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.blog-image{
+  width:25%;
+}
