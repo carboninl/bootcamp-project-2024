@@ -332,3 +332,12 @@ form {
 .blog-entry p{
   margin: 10px 300px 50px 300px;
 }
+
+.blog-content{
+  text-align: left;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
