@@ -38,10 +38,23 @@ function addBlogs(blogs: Blog[]) {
     //build new blog entry element
     const newEntry = document.createElement("div");
     newEntry.className = "blog-entry";
-
+    newEntry.innerHTML = `
+      <a href="${blog.slug}.html">
+        <h1>${blog.title}</h1>
+      </a>
+      <h5>${blog.date}</h5>
+      <img src="${blog.image}" alt="${blog.imageAlt}">
+      <p>${blog.description}</p>
+    `;
+    /* 
     //build header
     const entryHeader = document.createElement("h1");
     entryHeader.innerHTML = blog.title;
+
+    //build <a>
+    const entryLink = document.createElement("a");
+    entryLink.href = '${blog.slug}.html';
+    entryLink.appendChild(entryHeader)
 
     //build date
     const entryDate = document.createElement("h5");
@@ -61,7 +74,7 @@ function addBlogs(blogs: Blog[]) {
     newEntry.appendChild(entryDate);
     newEntry.appendChild(entryImage);
     newEntry.appendChild(entryDescription);
-
+ */
     //append new entry to blogContainer
     if (blogContainer) {
       blogContainer.appendChild(newEntry);

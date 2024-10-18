@@ -1,3 +1,4 @@
+//list of currently posted blogs
 var blogs = [
     {
         title: "I love sour cream",
@@ -16,30 +17,43 @@ var blogs = [
         slug: "Abroad-In-Rome",
     },
 ];
+//logic for dynamically adding blogs into DOM
 function addBlogs(blogs) {
     var blogContainer = document.getElementById("blog-container");
     blogs.forEach(function (blog) {
         //build new blog entry element
         var newEntry = document.createElement("div");
         newEntry.className = "blog-entry";
+        newEntry.innerHTML = "\n      <a href=\"".concat(blog.slug, "\">\n        <h1>").concat(blog.title, "</h1>\n      </a>\n      <h5>").concat(blog.date, "</h5>\n      <img src=\"").concat(blog.image, "\" alt=\"").concat(blog.imageAlt, "\">\n      <p>").concat(blog.description, "</p>\n    ");
+        /*
         //build header
-        var entryHeader = document.createElement("h1");
+        const entryHeader = document.createElement("h1");
         entryHeader.innerHTML = blog.title;
+    
+        //build <a>
+        const entryLink = document.createElement("a");
+        entryLink.href = '${blog.slug}.html';
+        entryLink.appendChild(entryHeader)
+    
         //build date
-        var entryDate = document.createElement("h5");
+        const entryDate = document.createElement("h5");
         entryDate.innerHTML = blog.date;
+    
         //build image
-        var entryImage = document.createElement("img");
+        const entryImage = document.createElement("img");
         entryImage.src = blog.image;
         entryImage.alt = blog.imageAlt;
+    
         //build description
-        var entryDescription = document.createElement("p");
+        const entryDescription = document.createElement("p");
         entryDescription.innerHTML = blog.description;
+    
         //append all the blog elements to the new entry
         newEntry.appendChild(entryHeader);
         newEntry.appendChild(entryDate);
         newEntry.appendChild(entryImage);
         newEntry.appendChild(entryDescription);
+     */
         //append new entry to blogContainer
         if (blogContainer) {
             blogContainer.appendChild(newEntry);
@@ -51,4 +65,4 @@ function addBlogs(blogs) {
     });
     return;
 }
-addBlogs(blogs);
+addBlogs(blogs); //add all blogs in the list
