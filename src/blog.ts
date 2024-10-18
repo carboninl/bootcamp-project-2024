@@ -46,35 +46,6 @@ function addBlogs(blogs: Blog[]) {
       <img src="${blog.image}" alt="${blog.imageAlt}">
       <p>${blog.description}</p>
     `;
-    /* 
-    //build header
-    const entryHeader = document.createElement("h1");
-    entryHeader.innerHTML = blog.title;
-
-    //build <a>
-    const entryLink = document.createElement("a");
-    entryLink.href = '${blog.slug}.html';
-    entryLink.appendChild(entryHeader)
-
-    //build date
-    const entryDate = document.createElement("h5");
-    entryDate.innerHTML = blog.date;
-
-    //build image
-    const entryImage = document.createElement("img");
-    entryImage.src = blog.image;
-    entryImage.alt = blog.imageAlt;
-
-    //build description
-    const entryDescription = document.createElement("p");
-    entryDescription.innerHTML = blog.description;
-
-    //append all the blog elements to the new entry
-    newEntry.appendChild(entryHeader);
-    newEntry.appendChild(entryDate);
-    newEntry.appendChild(entryImage);
-    newEntry.appendChild(entryDescription);
- */
     //append new entry to blogContainer
     if (blogContainer) {
       blogContainer.appendChild(newEntry);
