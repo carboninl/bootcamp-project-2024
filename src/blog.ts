@@ -14,7 +14,7 @@ const blogs: Blog[] = [
     date: "10/15/2024",
     description:
       "Learn about my love for sour cream!",
-    image: "/../images/sourcream.jpg",
+    image: "sourcream.jpg",
     imageAlt: "yummy sour cream",
     slug: "Sour-Cream-Blog",
   },
@@ -23,7 +23,7 @@ const blogs: Blog[] = [
     date: "10/15/2024",
     description:
       "Learn about my amazing experience abroad so far!",
-    image: "/../images/leaning-tower.jpg",
+    image: "leaning-tower.jpg",
     imageAlt:
       "me hitting the classic tourist pose with the Leaning Towe of Pisa",
     slug: "Abroad-In-Rome",
@@ -43,7 +43,7 @@ function addBlogs(blogs: Blog[]) {
         <h1>${blog.title}</h1>
       </a>
       <h5>${blog.date}</h5>
-      <img src="${blog.image}" alt="${blog.imageAlt}">
+      <img src="images/${blog.image}" alt="${blog.imageAlt}">
       <p>${blog.description}</p>
     `;
     //append new entry to blogContainer
