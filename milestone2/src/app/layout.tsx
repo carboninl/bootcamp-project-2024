@@ -32,8 +32,7 @@ export default function RootLayout({
         <html lang="en">
           <body className={geistMono.className}>
             {" "}
-            //remember Inter is simply the font I chose.
-            <Navbar /> // This sets the navbar on every page
+            <Navbar /> 
             {children}
           </body>
         </html>
