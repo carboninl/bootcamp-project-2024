@@ -14,7 +14,7 @@ export default function Navbar() {
         <li><Link href="/portfolio">Portfolio</Link></li>
         <li>
           <Link href="/">
-            <img className={style.homeImage} src="images/me.jpg" alt="home-page image" />
+            <img className={style.homeImage} src="/me.jpg" alt="home-page image" />
           </Link>
         </li>
         <li><Link href="/resume">Resume</Link></li>
