@@ -14,7 +14,7 @@ export interface Blog {
       date: "10/15/2024",
       description:
         "Learn about my love for sour cream!",
-      image: "/../images/sourcream.jpg",
+      image: "/sourcream.jpg",
       imageAlt: "yummy sour cream",
       slug: "Sour-Cream-Blog",
     },
@@ -23,7 +23,7 @@ export interface Blog {
       date: "10/15/2024",
       description:
         "Learn about my amazing experience abroad so far!",
-      image: "/../images/leaning-tower.jpg",
+      image: "/leaning-tower.jpg",
       imageAlt:
         "me hitting the classic tourist pose with the Leaning Towe of Pisa",
       slug: "Abroad-In-Rome",
