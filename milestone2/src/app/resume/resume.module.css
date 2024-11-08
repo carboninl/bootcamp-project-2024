@@ -1,0 +1,46 @@
+/* CSS for resume */
+
+.resume{
+    border: 5px,solid, var(--dark-red);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .resume h2 {
+    font-size: larger;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .resume h3 {
+    font-size: large;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .resume ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px; /* Adds indentation for the bullets */
+  }
+  
+  .resume li {
+    margin-left: 20px; /* Adjusts spacing if needed */
+  }
+
+  .separator{
+    border: none;
+    border-top: 2px solid var(--dark-red);
+  }
+  
+  .sectionTitle{
+    padding-top: 20px;
+    margin-bottom: 0px;
+  }
+  
