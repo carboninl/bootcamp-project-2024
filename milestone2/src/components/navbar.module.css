@@ -1,59 +1,40 @@
-
-/* CSS for navigation */
 .navbar {
-  position: sticky;
-  top: 0;
-  /*always be at the top*/
-  z-index: 100;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-  /* CSS for home page */
-.homeImage{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 5px solid var(--white);
-  margin: 5px;
-  transition: .2s ease-in;
-}
-  
 .navList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dark-red);
-  color: var(--white);
-  padding: 0px;
-  margin-top: 0px;
   list-style: none;
-  /* Debug border */
-  /* border: solid red; */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
 .navList li {
-  font-size: 20px;
-  padding: 6px;
+  display: inline;
 }
 
-.navList li:nth-child(3) {
-  margin-left: 20px; 
-  margin-right: 15px;
-}
-
-.navbar a {
-  color: var(--white);
-  font-weight: bold;
-  margin: 0 12px;
+.navList a {
   text-decoration: none;
-  letter-spacing: 2px;
+  color: #333;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
 }
 
-.navbar a:hover, .navbar a:active {
-  color: var(--pink);
-  text-decoration: underline;
+.navList a:hover {
+  color: #ec6686;
 }
 
-.navbar a img:hover {
-  transform: scale(1.1);
-  opacity: .8;
+.active a {
+  font-weight: bold;
 }
