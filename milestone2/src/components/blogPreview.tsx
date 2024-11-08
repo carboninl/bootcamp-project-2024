@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function BlogPreview(props: Blog) {
   return (
     <div className={style.blogCard}>
-      <Link href={`/blogs/${props.slug}`}>
+      <Link href={`/blogPages/${props.slug}`}>
           <h2 className={style.blogTitle}>{props.title}</h2>
       </Link>
       <div className={style.blogContent}>
