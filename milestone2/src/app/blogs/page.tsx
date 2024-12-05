@@ -20,7 +20,6 @@ async function getBlogs() {
 
 export default async function Home() {
   const blogs: Blog[] = await getBlogs();
-  console.log(blogs);
 
   return (
     <div>

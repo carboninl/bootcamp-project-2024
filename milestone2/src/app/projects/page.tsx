@@ -1,47 +1,33 @@
-import styles from "./projects.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import style from "./projects.module.css";
+import connectDB from "@/database/db";
+import ProjectModel, {Project} from "@/database/projectSchema"
+import ProjectComponent from "@/components/project";
 
-export default function Projects(){
-    return(
-    <main>
+async function getProjects() {
+  await connectDB(); // function from db.ts before
+
+  try {
+    // query for all projects and sort by name
+    const projects = await ProjectModel.find().sort({ name: 1 }).orFail();
+    // send a response as the projects as the message
+    return projects; 
+  } catch (err) {
+    return [];
+  }
+}
+
+export default async function Portfolio() {
+  const projects: Project[] = await getProjects();
+console.log(projects)
+
+  return (
+    <div>
       <h1 className="pageTitle">Projects</h1>
-      <div className={styles.container}>
-      <div className={styles.project}>
-        <Image
-            className={styles.projectImage}
-            src="/website.png"
-            alt="personal website image"
-            width={500}
-            height={500}
-        />
-        <div className={styles.projectDetails}>
-          <p className={styles.projectName}><strong>Personal Website</strong></p>
-          <p className={styles.projectDescription}>
-            Showcasing web development skills, and some details about me!
-          </p>
-          <Link href="/">Learn More</Link>
-        </div>
+      <div className={style.projectContainer}>
+        {projects.map((project) => (
+          <ProjectComponent {...(project as any)._doc} key={project.name} />
+        ))}
       </div>
-      <div className={styles.project}>
-        <Image
-          className={styles.projectImage}
-          src="/poly-exchange.jpg"
-          alt="poly exchange image"
-          width={500}
-          height={500}
-        />
-        <div className={styles.projectDetails}>
-          <p className={styles.projectName}><strong>Poly Exchange</strong></p>
-          <p className={styles.projectDescription}>
-            Developed during SLO Hacks 2024, providing a sustainable marketplace
-            for Cal Poly students. Full-Stack developed using the Flask
-            framework.
-          </p>
-        </div>
-      </div>
-      </div>
-    </main>
-    );
-
+    </div>
+  );
 }
