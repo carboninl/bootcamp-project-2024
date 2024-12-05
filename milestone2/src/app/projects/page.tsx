@@ -18,7 +18,7 @@ async function getProjects() {
 
 export default async function Portfolio() {
   const projects: Project[] = await getProjects();
-console.log(projects)
+  console.log(projects)
 
   return (
     <div>
