@@ -1,0 +1,29 @@
+.commentContainer {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    padding: 15px 0 15px 30px; /* Added more padding on the left */
+    border-radius: 10px; /* Rounded corners */
+
+  }
+  
+  .commentUser {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .commentContent {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    
+  }
+  
+  .commentTime {
+    font-size: 0.875rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  

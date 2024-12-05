@@ -1,13 +1,14 @@
 import React from "react";
 import style from "./blogPreview.module.css";
-import { Blog } from "@/app/static/blogData";
+import { Blog } from "../database/blogSchema";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function BlogPreview(props: Blog) {
+
   return (
     <div className={style.blogCard}>
-      <Link href={`/blogPages/${props.slug}`}>
+      <Link href={`/blogs/${props.slug}`}>
           <h2 className={style.blogTitle}>{props.title}</h2>
       </Link>
       <div className={style.blogContent}>
@@ -23,7 +24,7 @@ export default function BlogPreview(props: Blog) {
         </div>
         <div className={style.blogInfo}>
           <p className={style.blogDescription}>{props.description}</p>
-          <p className={style.blogDate}>{props.date}</p>
+          <p className={style.blogDate}>{props.date.toDateString()}</p>
         </div>
       </div>
     </div>
