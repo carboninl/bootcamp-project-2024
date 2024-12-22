@@ -41,9 +41,11 @@ export default function ContactForm() {
 
     emailjs.send("default_service", "template_xwjevkp", templateParams).then(
       (res) => {
+        alert("Your email has been sent!")
         console.log("SUCCESS!", res.status, res.text);
       },
       (err) => {
+        alert("Failed to send, please try again.")
         console.log("FAILED...", err);
       }
     );
