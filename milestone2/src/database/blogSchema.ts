@@ -22,6 +22,7 @@ const blogSchema = new Schema<Blog>({
 		image: { type: String, required: true },
 	  imageAlt: { type: String, required: true },
 		content: { type: String, required: true },
+		comments: {type: [Object], default:[]}
 })
 
 export type IComment = {
