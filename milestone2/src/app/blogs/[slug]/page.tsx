@@ -8,7 +8,7 @@ type Props = {
   params: { slug: string };
 };
 
-async function getBlog(slug: string) {
+async function getBlog(slug: string): Promise<Blog | null> {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
     const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
@@ -29,8 +29,10 @@ async function getBlog(slug: string) {
   }
 }
 
-export default async function BlogScreen({ params: { slug } }: Props) {
-  const blog: Blog = await getBlog(slug);
+export default async function BlogScreen({ params }: Props) {
+	const { slug } = params;
+	
+	const blog = await getBlog(slug);
 
   if (!blog) {
     return (
