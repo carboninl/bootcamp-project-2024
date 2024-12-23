@@ -4,9 +4,6 @@ import style from "./blog.module.css";
 import Comment from "@/components/comment";
 import CommentForm from "@/components/commentForm";
 
-type Props = {
-  params: { slug: string };
-};
 
 async function getBlog(slug: string): Promise<Blog | null> {
   try {
