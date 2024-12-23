@@ -9,13 +9,13 @@ export default function Home() {
         <div className={styles.about}>
           <figure className={styles.aboutImage}>
           <Image
-            src="/milky-way.jpg"
-            alt="milky-way landscape photo"
+            src="/assisi.jpg"
+            alt="me in Assisi, Italy"
             width={200}
             height={150} // Add height for the Image component
           />
             <figcaption>
-              Fun Fact: I took this picture, and I am very proud :)
+              Me on an overlook in Assisi, Italy!
             </figcaption>
           </figure>
           <div className={styles.aboutText}>
