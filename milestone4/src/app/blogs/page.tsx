@@ -13,7 +13,7 @@ async function getBlogs() {
     const blogs = await BlogModel.find().sort({ date: -1 }).orFail();
     // send a response as the blogs as the message
     return blogs;
-  } catch (err) {
+  } catch {
     return [];
   }
 }

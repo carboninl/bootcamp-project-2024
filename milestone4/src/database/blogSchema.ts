@@ -31,11 +31,6 @@ export type IComment = {
     date: Date;
 }
 
-const commentSchema = new Schema<IComment>({
-    user: {type: String, required: true},
-    content: {type: String, required: true},
-    date: { type: Date, required: true, default: new Date()}
-})
 
 // defining the collection and model
 const BlogModel = mongoose.models['blogs'] ||
