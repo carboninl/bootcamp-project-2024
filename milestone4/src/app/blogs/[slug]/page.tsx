@@ -28,8 +28,10 @@ async function getBlog(slug: string): Promise<Blog | null> {
   }
 }
 
-export default async function BlogScreen({ params }: Props) {
-  const { slug } = params;
+type Params = Promise<{slug: string}>;
+
+export default async function BlogScreen(props:{params: Params}) {
+  const { slug } = await props.params;
 	
 	const blog = await getBlog(slug);
 
