@@ -29,8 +29,7 @@ async function getBlog(slug: string): Promise<Blog | null> {
 }
 
 export default async function BlogScreen({ params }: Props) {
-	const awaitedParams = await params;
-  const { slug } = awaitedParams;
+  const { slug } = params;
 	
 	const blog = await getBlog(slug);
 
