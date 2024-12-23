@@ -17,7 +17,7 @@ export default function CommentForm({ slug }: CommentFormProps) {
       content,
     };
 
-    fetch(`https://bootcamp-project-2024-8tu26q8jn-nicholas-carbonis-projects.vercel.app/api/blogs/${slug}/comment`, {
+    fetch(`https://bootcamp-project-2024-lilac.vercel.app/api/blogs/${slug}/comment`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
