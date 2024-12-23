@@ -43,7 +43,7 @@
   .projectDetails a {
     text-decoration: none;
     font-weight: bold;
-    color: #0070f3;
+    color: #ec6686;
     border: 1px solid transparent;
     padding: 8px 16px;
     border-radius: 8px;
@@ -51,8 +51,7 @@
   }
   
   .projectDetails a:hover {
-    background-color: #0070f3;
+    background-color: #c15770;
     color: #ffffff;
-    border-color: #005bb5;
   }
   
