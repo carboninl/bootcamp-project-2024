@@ -5,9 +5,9 @@ import blogSchema from "@/database/blogSchema"
 
 
 // If { params } looks confusing, check the note below this code block
-export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
     await connectDB() // function from db.ts before
-		const { slug } = params // another destructure
+    const slug = (await params).slug;
 
 	   try {
 	        const blog = await blogSchema.findOne({ slug }).orFail()
