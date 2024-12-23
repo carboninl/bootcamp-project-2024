@@ -8,7 +8,7 @@ import CommentForm from "@/components/commentForm";
 async function getBlog(slug: string): Promise<Blog | null> {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
+    const res = await fetch(`https://bootcamp-project-2024-8tu26q8jn-nicholas-carbonis-projects.vercel.app/api/blogs/${slug}`, {
       cache: "no-store",
     });
     // This checks that the GET request was successful
