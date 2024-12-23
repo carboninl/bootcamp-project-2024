@@ -20,7 +20,7 @@ export default function Home() {
           </figure>
           <div className={styles.aboutText}>
             <p>
-              I'm <strong>Nick Carboni</strong>, a second-year computer science
+              I&apos;m <strong>Nick Carboni</strong>, a second-year computer science
               student at <strong>Cal Poly SLO</strong>.
             </p>
             <p>

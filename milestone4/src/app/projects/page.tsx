@@ -11,7 +11,7 @@ async function getProjects() {
     const projects = await ProjectModel.find().sort({ name: 1 }).orFail();
     // send a response as the projects as the message
     return projects; 
-  } catch (err) {
+  } catch {
     return [];
   }
 }
