@@ -1,46 +1,31 @@
-/* CSS for resume */
+.PDFContainer {
+  margin: 0px; /* Reduce the top margin if needed */
+  width: 80vh;
+  height: 150vh; /* Use a percentage of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.resume{
-    border: 5px,solid, var(--dark-red);
-    border-radius: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-  }
-  
-  .resume h2 {
-    font-size: larger;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
+.embeddedPDF {
+  width: 100%; /* Occupy 90% of the container width */
+  height: 100%; /* Match the container's height */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better appearance */
+  border-radius: 12px; /* Optional: Rounded corners */
+}
 
-  .resume h3 {
-    font-size: large;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.download {
+  color: #ec6686; /* Primary color for the text */
+  text-decoration: underline; /* Ensure it looks like a link */
+  font-size: 16px;
+  font-weight: 500; /* Semi-bold text for emphasis */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+  margin: 20px;
+}
 
-  }
+.download:hover {
+  color: #c15770; /* Darker shade on hover */
+}
 
-  .resume ul {
-    list-style-type: disc; /* Adds bullet points */
-    padding-left: 20px; /* Adds indentation for the bullets */
-  }
-  
-  .resume li {
-    margin-left: 20px; /* Adjusts spacing if needed */
-  }
-
-  .separator{
-    border: none;
-    border-top: 2px solid var(--dark-red);
-  }
-  
-  .sectionTitle{
-    padding-top: 20px;
-    margin-bottom: 0px;
-  }
-  
